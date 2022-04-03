@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { RenderResult, fireEvent, render, wait } from '@testing-library/react';
 import { SinonStub, stub } from 'sinon';
-import { FormCrearProducto } from './';
+import { FormCrearPasaporte } from '.';
 import { setTextEvent } from 'app/shared/utils/test';
 
-describe('FormCrearProducto test', () => {
+describe('FormCrearPasaporte test', () => {
   let componentWrapper: RenderResult;
-  let componentProps: React.ComponentProps<typeof FormCrearProducto> & {
+  let componentProps: React.ComponentProps<typeof FormCrearPasaporte> & {
     onSubmit: SinonStub;
   };
 
@@ -15,7 +15,7 @@ describe('FormCrearProducto test', () => {
       formTitle: 'Form test',
       onSubmit: stub(),
     };
-    componentWrapper = render(<FormCrearProducto {...componentProps} />);
+    componentWrapper = render(<FormCrearPasaporte {...componentProps} />);
   });
 
   it('should match snapshot', () => {

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Layout } from 'app/shared/components/Layout';
-import { ProveedorGestionProductos } from '../hoc/ProveedorGestionProductos';
+import { ProveedorGestionPasaportes } from '../hoc/ProveedorGestionPasaportes';
 import { RouteComponentProps } from 'react-router-dom';
 
 const MainPage: React.FC<RouteComponentProps> = () => {
   return (
-    <Layout title="Productos" description="Gestión de productos">
-      <ProveedorGestionProductos/>
+    <Layout title="Pasaportes" description="Gestión de pasaportes">
+      <ProveedorGestionPasaportes/>
     </Layout>
   );
 };

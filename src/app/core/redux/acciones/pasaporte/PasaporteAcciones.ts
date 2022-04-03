@@ -38,10 +38,12 @@ export function listarPasaportesAsync(numeroPagina: number) {
   return function (dispacth: any) {
     PasaporteRepositorio.consultarPorPagina(
       numeroPagina
-    ).then((respuesta: any) =>
+    ).then((respuesta: any) =>{
       dispacth(
-        listarPasaportes(respuesta.data.articles, respuesta.data.articlesCount)
+        listarPasaportes(respuesta.data, respuesta.data.length)
       )
+    }
+      
     );
   };
 }

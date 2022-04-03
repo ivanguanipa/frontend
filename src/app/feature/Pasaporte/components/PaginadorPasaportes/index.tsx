@@ -1,24 +1,24 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-interface PaginadorProductosProps {
-  cantidadTotalProductos: number;
+interface PaginadorPasaportesProps {
+  cantidadTotalPasaportes: number;
   onClickCambiarPagina: (numeroPagina: number) => void;
 }
 
-const PRODUCTOS_VISIBLES_POR_PAGINA = 10;
+const PASAPORTES_VISIBLES_POR_PAGINA = 10;
 
-export const PaginadorProductos: React.FC<PaginadorProductosProps> = ({
+export const PaginadorPasaportes: React.FC<PaginadorPasaportesProps> = ({
   onClickCambiarPagina,
-  cantidadTotalProductos,
+  cantidadTotalPasaportes,
 }) => {
-  if (cantidadTotalProductos <= PRODUCTOS_VISIBLES_POR_PAGINA) {
+  if (cantidadTotalPasaportes <= PASAPORTES_VISIBLES_POR_PAGINA) {
     return null;
   }
 
   const rango = Array.from(
     Array(
-      Math.ceil(cantidadTotalProductos / PRODUCTOS_VISIBLES_POR_PAGINA)
+      Math.ceil(cantidadTotalPasaportes / PASAPORTES_VISIBLES_POR_PAGINA)
     ).keys()
   );
 
@@ -38,7 +38,7 @@ export const PaginadorProductos: React.FC<PaginadorProductosProps> = ({
   );
 };
 
-PaginadorProductos.propTypes = {
-  cantidadTotalProductos: PropTypes.number.isRequired,
+PaginadorPasaportes.propTypes = {
+  cantidadTotalPasaportes: PropTypes.number.isRequired,
   onClickCambiarPagina: PropTypes.func.isRequired,
 };

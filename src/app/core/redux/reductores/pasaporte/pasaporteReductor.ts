@@ -13,8 +13,8 @@ const initialState: EstadoPasaporte = {
 };
 
 export default function (
-  action: TiposAccionesPasaporte,
-  state = initialState
+  state = initialState,
+  action: TiposAccionesPasaporte
 ): EstadoPasaporte {
   switch (action.type) {
     case LISTAR_PASAPORTES: {

@@ -34,11 +34,12 @@ export default function (
     }
 
     case ELIMINAR_PASAPORTE: {
+      console.log('reductor ELIMINAR_PASAPORTE')
       const pasaporte = action.payload;
       return {
         ...state,
         pasaportes: [
-          ...state.pasaportes.filter((p) => p.document_id !== pasaporte.document_id),
+          ...state.pasaportes.filter((p) => p.id !== pasaporte.id),
         ],
       };
     }

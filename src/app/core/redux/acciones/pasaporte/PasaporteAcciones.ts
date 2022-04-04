@@ -43,7 +43,37 @@ export function listarPasaportesAsync(numeroPagina: number) {
         listarPasaportes(respuesta.data, respuesta.data.length)
       )
     }
-      
     );
+  };
+}
+export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
+  return function (dispacth: any) {
+    console.log("eliminarPasaportesAsync", pasaporte, pasaporte.id);
+    PasaporteRepositorio.eliminarPasaporte(
+      pasaporte.id
+    ).then((respuesta: any) =>{
+      dispacth(
+        eliminarPasaporte(pasaporte)
+      )
+    }
+    ).catch(e=>{
+      alert('El registro que intenta eliminar no existe');
+    });
+  };
+}
+export function agregarPasaportesAsync(pasaporte: Pasaporte) {
+  return function (dispacth: any) {
+    console.log("agregarPasaportesAsync", pasaporte, pasaporte.id);
+    PasaporteRepositorio.agregarPasaporte(
+      pasaporte
+    ).then((respuesta: any) =>{
+      console.log('respuesta',respuesta);
+      dispacth(
+        agregarNuevoPasaporte(respuesta.data)
+      )
+    }
+    ).catch(({error,request})=>{
+      alert(`El hubo un problema al intentar agregar: ${JSON.parse(request.response).message}`);
+    });
   };
 }

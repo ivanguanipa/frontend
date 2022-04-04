@@ -6,7 +6,7 @@ export const DivContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const DivRow = styled.div`
+export const DivRow3 = styled.div`
   flex: 0 0 100%;
   width: 100%;
   position: relative;
@@ -15,7 +15,20 @@ export const DivRow = styled.div`
   padding-right: 15px;
   padding-left: 15px;
   @media (min-width: 768px) {
-    width: 50%;
-    flex: 0 0 50%;
+    width: 30%;
+    flex: 0 0 30%;
+  }
+`;
+export const DivRow7 = styled.div`
+  flex: 0 0 100%;
+  width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media (min-width: 768px) {
+    width: 70%;
+    flex: 0 0 70%;
   }
 `;

@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { DivContainer, DivRow } from './styles';
+import { DivContainer, DivRow3, DivRow7 } from './styles';
 import { FormCrearPasaporte } from '../../components/FormCrearPasaporte';
 import { ListaPasaportes } from '../../components/ListarPasaportes';
 import { PaginadorPasaportes } from '../../components/PaginadorPasaportes';
@@ -11,7 +11,7 @@ interface GestionPasaportesProps {
   pasaportes: Array<Pasaporte>;
   listarPasaportes: (numeroPagina: number) => void;
   agregarNuevoPasaporte: (pasaportes: Pasaporte) => void;
-  eliminarPasaporte: (pasaportes: Pasaporte) => void;
+  eliminarPasaporte: (pasaporte: Pasaporte) => void;
   cantidadTotalPasaporte: number;
 }
 
@@ -23,18 +23,17 @@ export const GestionPasaportes: React.FC<GestionPasaportesProps> = ({
   cantidadTotalPasaporte,
 }) => {
   useEffect(() => {
-    console.log('pasando useeffect');
     listarPasaportes(0);
   }, [listarPasaportes]);
   return (
     <DivContainer>
-      <DivRow>
+      <DivRow3>
         <FormCrearPasaporte
           onSubmit={agregarNuevoPasaporte}
           formTitle="Crear pasaporte"
         />
-      </DivRow>
-      <DivRow>
+      </DivRow3>
+      <DivRow7>
         <ListaPasaportes
           pasaportes={pasaportes}
           onClickEliminarPasaporte={eliminarPasaporte}
@@ -43,7 +42,7 @@ export const GestionPasaportes: React.FC<GestionPasaportesProps> = ({
           cantidadTotalPasaportes={cantidadTotalPasaporte}
           onClickCambiarPagina={listarPasaportes}
         />
-      </DivRow>
+      </DivRow7>
     </DivContainer>
   );
 };

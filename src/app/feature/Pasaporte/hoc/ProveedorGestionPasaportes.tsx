@@ -1,7 +1,7 @@
 import {
-  agregarNuevoPasaporte,
-  eliminarPasaporte,
   listarPasaportesAsync,
+  eliminarPasaportesAsync,
+  agregarPasaportesAsync
 } from 'app/core/redux/acciones/pasaporte/PasaporteAcciones';
 import { EstadoGeneral } from 'app/core/redux/modelo/pasaporte/EstadoGeneral';
 import { GestionPasaportes } from '../containers/GestionPasaportes';
@@ -13,6 +13,6 @@ const mapStateToProps = (state: EstadoGeneral) => {
 
 export const ProveedorGestionPasaportes = connect(mapStateToProps, {
   listarPasaportes: listarPasaportesAsync,
-  agregarNuevoPasaporte,
-  eliminarPasaporte,
+  agregarNuevoPasaporte: agregarPasaportesAsync,
+  eliminarPasaporte: eliminarPasaportesAsync,
 })(GestionPasaportes);

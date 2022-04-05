@@ -8,6 +8,8 @@ const limit = (count: number, p: number) =>
 export const PasaporteRepositorio = {
   consultarPorPagina: (page: number) =>
     axiosIntance.get(`/pasaportes?${limit(NUMERO_REGISTROS, page)}`),
+  mostrarPasaporte: (id: string) =>
+    axiosIntance.get(`/pasaportes/show/${id}`),
   eliminarPasaporte: (id: any) =>{
     console.log('PasaporteRepositorio','pasando Eliminar Pasaporte');
    return  axiosIntance.delete(`/pasaportes/delete`, {data:{id}});

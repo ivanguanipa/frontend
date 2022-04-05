@@ -2,6 +2,7 @@ import {
   AGREGAR_PASAPORTE,
   ELIMINAR_PASAPORTE,
   LISTAR_PASAPORTES,
+  MOSTRAR_PASAPORTE,
   TiposAccionesPasaporte,
 } from './PasaporteTiposAcciones';
 import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
@@ -26,6 +27,15 @@ export function agregarNuevoPasaporte(
     payload: pasaporte,
   };
 }
+export function mostrarPasaporte(
+  pasaporte: Pasaporte,
+): TiposAccionesPasaporte {
+  console.log('TiposAccionesPasaporte', pasaporte)
+  return {
+    type: MOSTRAR_PASAPORTE,
+    payload: pasaporte,
+  };
+}
 
 export function eliminarPasaporte(pasaporte: Pasaporte): TiposAccionesPasaporte {
   return {
@@ -34,18 +44,6 @@ export function eliminarPasaporte(pasaporte: Pasaporte): TiposAccionesPasaporte 
   };
 }
 
-export function listarPasaportesAsync(numeroPagina: number) {
-  return function (dispacth: any) {
-    PasaporteRepositorio.consultarPorPagina(
-      numeroPagina
-    ).then((respuesta: any) =>{
-      dispacth(
-        listarPasaportes(respuesta.data, respuesta.data.length)
-      )
-    }
-    );
-  };
-}
 export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
   return function (dispacth: any) {
     console.log("eliminarPasaportesAsync", pasaporte, pasaporte.id);
@@ -74,6 +72,37 @@ export function agregarPasaportesAsync(pasaporte: Pasaporte) {
     }
     ).catch(({error,request})=>{
       alert(`El hubo un problema al intentar agregar: ${JSON.parse(request.response).message}`);
+    });
+  };
+}
+
+
+export function listarPasaportesAsync(numeroPagina: number) {
+  return function (dispacth: any) {
+    PasaporteRepositorio.consultarPorPagina(
+      numeroPagina
+    ).then((respuesta: any) =>{
+      dispacth(
+        listarPasaportes(respuesta.data, respuesta.data.length)
+      )
+    }
+    );
+  };
+}
+export function mostrarPasaporteAsync(id: string, callback:any) {
+  console.log(callback);
+  return function (dispacth: any) {
+    console.log("mostrarPasaportesAsync", id);
+    PasaporteRepositorio.mostrarPasaporte(
+      id
+    ).then((respuesta: any) =>{
+      console.log('respuesta',respuesta.data.length);
+      dispacth(
+        mostrarPasaporte(respuesta.data[0])
+      )
+    }
+    ).catch(({error,request})=>{
+      callback();
     });
   };
 }

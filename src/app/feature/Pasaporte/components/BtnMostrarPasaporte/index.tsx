@@ -2,28 +2,27 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Button } from 'app/shared/components/Button';
 import { Pasaporte } from '../../models/Pasaporte';
+import { Route } from 'react-router-dom';
 
-interface BtnEliminarPasaporteProps {
-  onEliminar: (pasaporte: Pasaporte) => any;
+interface BtnMostrarPasaporteProps {
   pasaporte: Pasaporte;
 }
 
-export const BtnEliminarPasaporte: React.FC<BtnEliminarPasaporteProps> = ({
-  onEliminar,
+export const BtnMostrarPasaporte: React.FC<BtnMostrarPasaporteProps> = ({
   pasaporte,
 }) => {
-
-  const handleEliminar = () => onEliminar(pasaporte);
   return (
-    <Button onClick={handleEliminar}>
+    <Route render={({ history}) => (
+    <Button onClick={() => { history.push('/pasaportes/show/'+pasaporte.id) }}>
       <span role="img" aria-labelledby="trash">
-        🗑️
+        Ver
       </span>
-    </Button>
+    </Button>)}
+    />
   );
 };
 
-BtnEliminarPasaporte.propTypes = {
+BtnMostrarPasaporte.propTypes = {
   pasaporte: PropTypes.shape({
     id: PropTypes.number.isRequired,
     fullname: PropTypes.string.isRequired,
@@ -34,5 +33,4 @@ BtnEliminarPasaporte.propTypes = {
     appointment_date: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
   }).isRequired,
-  onEliminar: PropTypes.func.isRequired,
 };

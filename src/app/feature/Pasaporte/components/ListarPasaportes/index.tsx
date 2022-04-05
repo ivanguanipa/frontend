@@ -1,6 +1,7 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { BtnEliminarPasaporte } from '../EliminarPasaporte';
+import { BtnMostrarPasaporte } from '../BtnMostrarPasaporte';
 import { Pasaporte } from '../../models/Pasaporte';
 import { Table } from './styles';
 
@@ -53,6 +54,9 @@ export const ListaPasaportes: React.FC<ListaPasaportesProps> = ({
               <td>{pasaporte.amount}</td>
               
               <td>
+                <BtnMostrarPasaporte
+                  pasaporte={pasaporte}
+                ></BtnMostrarPasaporte>
                 <BtnEliminarPasaporte
                   pasaporte={pasaporte}
                   onEliminar={()=>onClickEliminarPasaporte(pasaporte)}

@@ -3,11 +3,17 @@ import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
 export const LISTAR_PASAPORTES = 'LISTAR_PASAPORTES';
 export const AGREGAR_PASAPORTE = 'AGREGAR_PASAPORTE';
 export const ELIMINAR_PASAPORTE = 'ELIMINAR_PASAPORTE';
+export const MOSTRAR_PASAPORTE = 'MOSTRAR_PASAPORTE';
 
 interface AccionListarPasaportes {
   type: typeof LISTAR_PASAPORTES;
   payload: Pasaporte[];
   cantidadTotalPasaporte: number;
+}
+
+interface AccionMostrarPasaportes {
+  type: typeof MOSTRAR_PASAPORTE;
+  payload: Pasaporte;
 }
 
 interface AccionAgregarPasaporte {
@@ -22,5 +28,6 @@ interface AccionEliminarPasaporte {
 
 export type TiposAccionesPasaporte =
   | AccionListarPasaportes
+  | AccionMostrarPasaportes
   | AccionAgregarPasaporte
   | AccionEliminarPasaporte;

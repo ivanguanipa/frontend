@@ -8,7 +8,7 @@ import { Pasaporte } from '../../models/Pasaporte';
 import { SpanError } from './styles';
 import { useFormik } from 'formik';
 
-type Nullable<T> = T | null;
+type Nullable<T> = T | null ;
 
 interface FormValues {
   fullname: string;
@@ -32,7 +32,7 @@ const validationSchema = Yup.object().shape<FormValues>({
   fullname: Yup.string().required('El campo nombre y apellido es requerido.'),
   address: Yup.string().required('El campo dirección es requerido.'),
   birthdate: Yup.string().required('El campo fecha de nacimiento es requerido.'),
-  document_id: Yup.number().required('El campo cédula es requerido.'),
+  document_id: Yup.number().moreThan(0,'El campo cédula es requerido.').required('El campo cédula es requerido.'),
   application_date: Yup.string().required('El campo fecha de solicitud es requerido.'),
   appointment_date: Yup.string().nullable(),
   amount: Yup.number().nullable(),
@@ -45,9 +45,9 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
   formTitle,
   initialValues = {
     fullname:'',
-    address: 'la vega',
+    address: '',
     birthdate: '',
-    document_id: 149080,
+    document_id: 0,
     application_date: '',
     appointment_date: null,
     amount: null,
@@ -58,7 +58,6 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
     values: FormValues,
     { resetForm }: FormikHelpers<FormValues>
   ) => {
-    console.log('pasando on submit');
     onSubmit({
       fullname: values.fullname,
       address: values.address,
@@ -79,7 +78,8 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <h2>{formTitle}</h2>
+      <h2 style={{marginBottom:'15px'}}>{formTitle}</h2>
+      <div><label htmlFor="fullname">Nombre y Apellido</label></div>
       <Input
         disabled={disabled}
         name="fullname"
@@ -90,6 +90,7 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
       {formik.touched.fullname && formik.errors.fullname && (
         <SpanError>{formik.errors.fullname}</SpanError>
       )}
+      <div> <label htmlFor="fullname">Dirección</label></div>
       <Input
         disabled={disabled}
         name="address"
@@ -100,6 +101,7 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
       {formik.touched.address && formik.errors.address && (
         <SpanError>{formik.errors.address}</SpanError>
       )}
+      <div><label htmlFor="fullname">Fecha de Nacimiento</label></div>
       <Input
       type='date'
         disabled={disabled}
@@ -111,22 +113,25 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
       {formik.touched.birthdate && formik.errors.birthdate && (
         <SpanError>{formik.errors.birthdate}</SpanError>
       )}
+      <div><label htmlFor="fullname">Cédula</label></div>
       <Input
       type='number'
         disabled={disabled}
         name="document_id"
-        placeholder="Cedula"
-        value={formik.values.document_id}
+        placeholder="Cédula"
+        value={formik.values.document_id===0?'':formik.values.document_id}
         onChange={formik.handleChange}
       />
       {formik.touched.document_id && formik.errors.document_id && (
         <SpanError>{formik.errors.document_id}</SpanError>
       )}
+      <div><label htmlFor="fullname">Fecha de la Solicitud</label></div>
+
       <Input
         type='date'
         disabled={disabled}
         name="application_date"
-        placeholder="Cedula"
+        placeholder="Fecha de la Solicitud"
         value={formik.values.application_date}
         onChange={formik.handleChange}
       />

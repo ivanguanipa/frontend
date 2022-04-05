@@ -4,6 +4,7 @@ import { BtnEliminarPasaporte } from '../EliminarPasaporte';
 import { BtnMostrarPasaporte } from '../BtnMostrarPasaporte';
 import { Pasaporte } from '../../models/Pasaporte';
 import { Table } from './styles';
+import {dateFormat} from "app/utils/index";
 
 export interface ListaPasaportesProps {
   pasaportes: Array<Pasaporte>;
@@ -49,8 +50,8 @@ export const ListaPasaportes: React.FC<ListaPasaportesProps> = ({
               <td>{pasaporte.fullname}</td>
               <td>{pasaporte.document_id}</td>
               <td>{pasaporte.address}</td>
-              <td>{pasaporte.application_date}</td>
-              <td>{pasaporte.appointment_date}</td>
+              <td>{dateFormat(pasaporte.application_date,"DD-MM-YYYY")}</td>
+              <td>{dateFormat(String(pasaporte.appointment_date),"DD-MM-YYYY")}</td>
               <td>{pasaporte.amount}</td>
               
               <td>

@@ -11,11 +11,11 @@ describe('Reductor pasaportes', () => {
       pasaportes: [],
     };
     const nuevoPasaporte: Pasaporte = {
-      title: 'nuevo',
-      slug: 'Juan Pablo Botero',
-      body: 'posting the article accessing using constant',
-      createdAt: '2020-03-03T03:20:27.795Z',
-      updatedAt: '2020-03-03T03:20:27.795Z',
+      fullname: 'lorem',
+      address: 'ipsun',
+      birthdate: '2021-01-01',
+      document_id: 12345,
+      application_date: '2021-01-01',
     };
     const estadoEsperado: EstadoPasaporte = {
       ...estadoInicial,
@@ -27,7 +27,6 @@ describe('Reductor pasaportes', () => {
       estadoInicial,
       agregarNuevoPasaporte(nuevoPasaporte)
     );
-
     // Assert
     expect(nuevoEstado).toStrictEqual(estadoEsperado);
   });

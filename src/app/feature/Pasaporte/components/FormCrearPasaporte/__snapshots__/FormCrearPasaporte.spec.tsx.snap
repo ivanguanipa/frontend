@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormCrearPasaporte test should match snapshot 1`] = `
+<div>
+  <form>
+    <h2
+      style="margin-bottom: 15px;"
+    >
+      Form test
+    </h2>
+    <div>
+      <label
+        for="fullname"
+      >
+        Nombre y Apellido
+      </label>
+    </div>
+    <input
+      class="sc-AxirZ eAukyj"
+      name="fullname"
+      placeholder="Nombre y Apellido"
+      value=""
+    />
+    <div>
+       
+      <label
+        for="fullname"
+      >
+        Dirección
+      </label>
+    </div>
+    <input
+      class="sc-AxirZ eAukyj"
+      name="address"
+      placeholder="Dirección"
+      value=""
+    />
+    <div>
+      <label
+        for="fullname"
+      >
+        Fecha de Nacimiento
+      </label>
+    </div>
+    <input
+      class="sc-AxirZ eAukyj"
+      name="birthdate"
+      placeholder="Fecha de Nacimiento"
+      type="date"
+      value=""
+    />
+    <div>
+      <label
+        for="fullname"
+      >
+        Cédula
+      </label>
+    </div>
+    <input
+      class="sc-AxirZ eAukyj"
+      name="document_id"
+      placeholder="Cédula"
+      type="number"
+      value=""
+    />
+    <div>
+      <label
+        for="fullname"
+      >
+        Fecha de la Solicitud
+      </label>
+    </div>
+    <input
+      class="sc-AxirZ eAukyj"
+      name="application_date"
+      placeholder="Fecha de la Solicitud"
+      type="date"
+      value=""
+    />
+    <input
+      class="sc-AxirZ eAukyj"
+      name="appointment_date"
+      type="hidden"
+      value=""
+    />
+    <input
+      class="sc-AxirZ eAukyj"
+      name="amount"
+      type="hidden"
+      value=""
+    />
+    <button
+      class="sc-AxjAm kgxTKy"
+      type="submit"
+    >
+      Registrar
+    </button>
+  </form>
+</div>
+`;

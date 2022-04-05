@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { ShallowWrapper, shallow } from 'enzyme';
-import { PaginadorProductos } from 'app/feature/Producto/components/PaginadorProductos';
+import { PaginadorPasaportes } from 'app/feature/Pasaporte/components/PaginadorPasaportes';
 
-describe('PaginadorProductos Test', () => {
+describe('PaginadorPasaportes Test', () => {
   let componentWrapper: ShallowWrapper;
 
   afterEach(() => {
@@ -11,8 +11,8 @@ describe('PaginadorProductos Test', () => {
 
   it('should match snapshot', () => {
     componentWrapper = shallow(
-      <PaginadorProductos
-        cantidadTotalProductos={11}
+      <PaginadorPasaportes
+      cantidadTotalPasaportes={11}
         onClickCambiarPagina={() => {}}
       />
     );
@@ -21,8 +21,8 @@ describe('PaginadorProductos Test', () => {
 
   it('Renderizar con menos de 10 productos no debe pintar botones', () => {
     componentWrapper = shallow(
-      <PaginadorProductos
-        cantidadTotalProductos={9}
+      <PaginadorPasaportes
+        cantidadTotalPasaportes={9}
         onClickCambiarPagina={() => {}}
       />
     );
@@ -32,8 +32,8 @@ describe('PaginadorProductos Test', () => {
 
   it('Renderizar con  20 productos debe pintar 2 botones', () => {
     componentWrapper = shallow(
-      <PaginadorProductos
-        cantidadTotalProductos={20}
+      <PaginadorPasaportes
+      cantidadTotalPasaportes={20}
         onClickCambiarPagina={() => {}}
       />
     );

@@ -4,7 +4,7 @@ import { Button } from 'app/shared/components/Button';
 import { Pasaporte } from '../../models/Pasaporte';
 
 interface BtnEliminarPasaporteProps {
-  onEliminar: (pasaporte: Pasaporte) => any;
+  onEliminar: (pasaporte: Pasaporte) => void;
   pasaporte: Pasaporte;
 }
 
@@ -13,7 +13,12 @@ export const BtnEliminarPasaporte: React.FC<BtnEliminarPasaporteProps> = ({
   pasaporte,
 }) => {
 
-  const handleEliminar = () => onEliminar(pasaporte);
+  const handleEliminar = () => {
+    if(window.confirm('Esta seguro de eliminar el registro seleccionado?')){
+      onEliminar(pasaporte)
+    }
+    
+  };
   return (
     <Button onClick={handleEliminar}>
       <span role="img" aria-labelledby="trash">

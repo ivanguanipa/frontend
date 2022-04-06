@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListarPasaportes Test should match snapshot 1`] = `
+<styled.table>
+  <thead>
+    <tr>
+      <td>
+        <b>
+          Nombre y Apellido
+        </b>
+      </td>
+      <td>
+        <b>
+          Cedula
+        </b>
+      </td>
+      <td>
+        <b>
+          Dirección
+        </b>
+      </td>
+      <td>
+        <b>
+          Fecha de Solicitud
+        </b>
+      </td>
+      <td>
+        <b>
+          Fecha de la Cita
+        </b>
+      </td>
+      <td>
+        <b>
+          Monto
+        </b>
+      </td>
+      <td>
+        <b>
+          Acción
+        </b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="12345"
+    >
+      <td>
+        lorem
+      </td>
+      <td>
+        12345
+      </td>
+      <td>
+        ipsun
+      </td>
+      <td>
+        01-01-2021
+      </td>
+      <td>
+        Invalid date
+      </td>
+      <td />
+      <td>
+        <BtnMostrarPasaporte
+          pasaporte={
+            Object {
+              "address": "ipsun",
+              "application_date": "2021-01-01",
+              "birthdate": "2021-01-01",
+              "document_id": 12345,
+              "fullname": "lorem",
+            }
+          }
+        />
+        <BtnEliminarPasaporte
+          onEliminar={[Function]}
+          pasaporte={
+            Object {
+              "address": "ipsun",
+              "application_date": "2021-01-01",
+              "birthdate": "2021-01-01",
+              "document_id": 12345,
+              "fullname": "lorem",
+            }
+          }
+        />
+      </td>
+    </tr>
+  </tbody>
+</styled.table>
+`;

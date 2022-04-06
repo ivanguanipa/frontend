@@ -42,6 +42,19 @@ describe('PaginadorPasaportes Test', () => {
     expect(buttons.at(1).text()).toBe('2');
     expect(buttons.at(2).exists()).toBeFalsy();
   });
+
+  it('test paginar función',()=>{
+    const mockPaginar = jest.fn();
+    componentWrapper = shallow(
+      <PaginadorPasaportes
+      cantidadTotalPasaportes={20}
+        onClickCambiarPagina={mockPaginar}
+      />
+    );
+    const buttons = componentWrapper.find('button');
+    buttons.at(0).simulate('click');
+    expect(mockPaginar.mock.calls.length).toEqual(1);
+  })
 });
 
 export {};

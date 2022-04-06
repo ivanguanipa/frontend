@@ -2,7 +2,7 @@ import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
 import { axiosIntance } from '../config/AxiosConfig';
 
 const NUMERO_REGISTROS = 10;
-const limit = (count: number, p: number) =>
+export const limit = (count: number, p: number) =>
   `limit=${count}&offset=${p ? p * count : 0}`;
 
 export const PasaporteRepositorio = {

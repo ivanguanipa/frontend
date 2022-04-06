@@ -11,11 +11,9 @@ export const PasaporteRepositorio = {
   mostrarPasaporte: (id: string) =>
     axiosIntance.get(`/pasaportes/show/${id}`),
   eliminarPasaporte: (id: any) =>{
-    console.log('PasaporteRepositorio','pasando Eliminar Pasaporte');
    return  axiosIntance.delete(`/pasaportes/delete`, {data:{id}});
   },
   agregarPasaporte: (pasaporte: Pasaporte) =>{
-    console.log('PasaporteRepositorio','pasando Eliminar Pasaporte');
    return  axiosIntance.post(`/pasaportes`, {
     address: pasaporte.address,
     application_date: pasaporte.application_date,

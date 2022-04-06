@@ -43,7 +43,6 @@ export default function (
     }
 
     case ELIMINAR_PASAPORTE: {
-      console.log('reductor ELIMINAR_PASAPORTE')
       const pasaporte = action.payload;
       return {
         ...state,

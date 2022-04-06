@@ -15,7 +15,6 @@ export const ListaPasaportes: React.FC<ListaPasaportesProps> = ({
   pasaportes,
   onClickEliminarPasaporte,
 }) => {
-  console.log('pasaportes',pasaportes);
   return (
     <Table>
       <thead>

@@ -30,7 +30,6 @@ export function agregarNuevoPasaporte(
 export function mostrarPasaporte(
   pasaporte: Pasaporte,
 ): TiposAccionesPasaporte {
-  console.log('TiposAccionesPasaporte', pasaporte)
   return {
     type: MOSTRAR_PASAPORTE,
     payload: pasaporte,
@@ -46,7 +45,6 @@ export function eliminarPasaporte(pasaporte: Pasaporte): TiposAccionesPasaporte 
 
 export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
   return function (dispacth: any) {
-    console.log("eliminarPasaportesAsync", pasaporte, pasaporte.id);
     PasaporteRepositorio.eliminarPasaporte(
       pasaporte.id
     ).then((respuesta: any) =>{
@@ -61,11 +59,9 @@ export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
 }
 export function agregarPasaportesAsync(pasaporte: Pasaporte) {
   return function (dispacth: any) {
-    console.log("agregarPasaportesAsync", pasaporte, pasaporte.id);
     PasaporteRepositorio.agregarPasaporte(
       pasaporte
     ).then((respuesta: any) =>{
-      console.log('respuesta',respuesta);
       dispacth(
         agregarNuevoPasaporte(respuesta.data)
       )
@@ -90,13 +86,10 @@ export function listarPasaportesAsync(numeroPagina: number) {
   };
 }
 export function mostrarPasaporteAsync(id: string, callback:any) {
-  console.log(callback);
   return function (dispacth: any) {
-    console.log("mostrarPasaportesAsync", id);
     PasaporteRepositorio.mostrarPasaporte(
       id
     ).then((respuesta: any) =>{
-      console.log('respuesta',respuesta.data.length);
       dispacth(
         mostrarPasaporte(respuesta.data[0])
       )

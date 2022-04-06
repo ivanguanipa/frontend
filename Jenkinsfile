@@ -33,7 +33,7 @@ pipeline{
             stage('test '){
                 steps {
 					sh 'npm i'
-                    sh 'npm run test:cov'					
+                    sh 'npm run test:coverage'					
 				}
             }
 

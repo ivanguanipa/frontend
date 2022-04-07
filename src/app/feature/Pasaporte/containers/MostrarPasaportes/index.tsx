@@ -3,7 +3,6 @@ import * as React from 'react';
 import { DivContainer, DivRow3 } from './styles';
 import { Pasaporte } from '../../models/Pasaporte';
 import { useEffect } from 'react';
-import { Route } from 'react-router-dom';
 import { Button } from 'app/shared/components/Button';
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";

@@ -23,7 +23,6 @@ describe('ProveedorMostrarPasaportes',()=>{
                 cantidadTotalPasaporte:0
             }
         }
-        console.log()
         expect(typeof mapStateToProps(test)).toBe('object');
     });
 

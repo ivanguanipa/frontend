@@ -23,7 +23,6 @@ describe('ProveedorGestionPasaportes',()=>{
                 cantidadTotalPasaporte:0
             }
         }
-        console.log()
         expect(typeof mapStateToProps(test)).toBe('object');
     });
 

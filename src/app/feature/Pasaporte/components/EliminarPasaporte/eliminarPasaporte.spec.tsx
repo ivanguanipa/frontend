@@ -58,7 +58,6 @@ describe('Btn Eliminar Pasaportes Test', () => {
    // spyOn(componentWrapper.props(),'mockEliminar').and.returnValue(true);
 
     buttons.simulate('click');
-    console.log('cantidad botones',buttons.length);
     expect(mockEliminar).toHaveBeenCalled();
   })
   it('test negar eliminar pasaporte',()=>{
@@ -87,7 +86,6 @@ describe('Btn Eliminar Pasaportes Test', () => {
    // spyOn(componentWrapper.props(),'mockEliminar').and.returnValue(true);
 
     buttons.simulate('click');
-    console.log('cantidad botones',buttons.length);
     expect(mockEliminar).not.toHaveBeenCalled();
   })
  

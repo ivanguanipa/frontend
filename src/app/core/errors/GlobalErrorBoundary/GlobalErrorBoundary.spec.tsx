@@ -14,13 +14,11 @@ describe('GlobalErrorBoundary Test', () => {
     it('should crreturn undefinded', () => {
 
         const obj = new GlobalErrorBoundary({ hasError: false });
-        console.log()
         expect(obj.render()).toBe(undefined);
       });
     it('should crreturn undefinded', () => {
 
         const obj = new GlobalErrorBoundary({ hasError: true });
-        console.log(obj.render())
         expect(obj.render()).toBe(undefined);
       });
 })

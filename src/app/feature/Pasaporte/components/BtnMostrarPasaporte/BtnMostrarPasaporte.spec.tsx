@@ -2,7 +2,6 @@ import * as React from 'react';
 import { ShallowWrapper, shallow } from 'enzyme';
 import { BtnMostrarPasaporte } from 'app/feature/Pasaporte/components/BtnMostrarPasaporte';
 import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
-import { render, fireEvent } from '@testing-library/react';
 
 const mockHistoryPush = jest.fn();
 

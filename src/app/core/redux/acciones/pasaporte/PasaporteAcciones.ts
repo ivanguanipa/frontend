@@ -51,13 +51,10 @@ export function eliminarPasaporte(pasaporte: Pasaporte): TiposAccionesPasaporte 
 }
 
 export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
-  console.log('comienzo funcion');
   return function (dispacth: any) {
-    console.log('comienzo funcion anonima');
     PasaporteRepositorio.eliminarPasaporte(
       pasaporte.id
     ).then((respuesta: any) =>{
-      console.log('comienzo dispatch');
       dispacth(
         eliminarPasaporte(pasaporte)
       )

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListarPasaportes Test should match snapshot 1`] = `
+exports[`PaginadorPasaportes Test should match snapshot 1`] = `
 <styled.table>
   <thead>
     <tr>

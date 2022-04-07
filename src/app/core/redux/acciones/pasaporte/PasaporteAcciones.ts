@@ -3,10 +3,17 @@ import {
   ELIMINAR_PASAPORTE,
   LISTAR_PASAPORTES,
   MOSTRAR_PASAPORTE,
+  ESTADO_INICIAL,
   TiposAccionesPasaporte,
 } from './PasaporteTiposAcciones';
 import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
 import { PasaporteRepositorio } from 'app/core/api/pasaportes.repositorio';
+
+export function estadoInicial(): TiposAccionesPasaporte {
+  return {
+    type: ESTADO_INICIAL,
+  };
+}
 
 export function listarPasaportes(
   pasaportes: Array<Pasaporte>,

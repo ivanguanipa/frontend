@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn Eliminar Pasaportes Test should match snapshot 1`] = `
+<styled.button
+  className="deletePassport"
+  onClick={[Function]}
+>
+  <span
+    aria-labelledby="trash"
+    role="img"
+  >
+    🗑️
+  </span>
+</styled.button>
+`;

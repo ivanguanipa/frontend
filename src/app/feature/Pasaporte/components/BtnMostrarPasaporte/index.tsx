@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Button } from 'app/shared/components/Button';
 import { Pasaporte } from '../../models/Pasaporte';
 import { Route } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 interface BtnMostrarPasaporteProps {
   pasaporte: Pasaporte;
@@ -11,14 +12,14 @@ interface BtnMostrarPasaporteProps {
 export const BtnMostrarPasaporte: React.FC<BtnMostrarPasaporteProps> = ({
   pasaporte,
 }) => {
+  let history = useHistory();
+
   return (
-    <Route render={({ history}) => (
-    <Button onClick={() => { history.push('/pasaportes/show/'+pasaporte.id) }}>
+    <Button className={'showPassport'} onClick={() => history.push('/pasaportes/show/'+pasaporte.id)}>
       <span role="img" aria-labelledby="trash">
         Ver
       </span>
-    </Button>)}
-    />
+    </Button>
   );
 };
 

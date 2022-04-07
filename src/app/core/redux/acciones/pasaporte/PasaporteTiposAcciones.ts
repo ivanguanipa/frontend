@@ -4,11 +4,16 @@ export const LISTAR_PASAPORTES = 'LISTAR_PASAPORTES';
 export const AGREGAR_PASAPORTE = 'AGREGAR_PASAPORTE';
 export const ELIMINAR_PASAPORTE = 'ELIMINAR_PASAPORTE';
 export const MOSTRAR_PASAPORTE = 'MOSTRAR_PASAPORTE';
+export const ESTADO_INICIAL = 'ESTADO_INICIAL';
 
 interface AccionListarPasaportes {
   type: typeof LISTAR_PASAPORTES;
   payload: Pasaporte[];
   cantidadTotalPasaporte: number;
+}
+
+interface AccionEstadoIncial {
+  type: typeof ESTADO_INICIAL;
 }
 
 interface AccionMostrarPasaportes {
@@ -30,4 +35,5 @@ export type TiposAccionesPasaporte =
   | AccionListarPasaportes
   | AccionMostrarPasaportes
   | AccionAgregarPasaporte
-  | AccionEliminarPasaporte;
+  | AccionEliminarPasaporte
+  | AccionEstadoIncial;

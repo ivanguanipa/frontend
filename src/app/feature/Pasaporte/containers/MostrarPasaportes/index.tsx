@@ -18,6 +18,8 @@ export const MostrarPasaportes: React.FC<MostrarPasaportesProps> = ({
   pasaporte,
 }) => {
   const { id } = useParams<{ id: string }>();
+
+  const pleaseWait = 'Por favor espere...';
   let history = useHistory();
   useEffect(() => {
     const recordNotFound = ()=>{
@@ -41,15 +43,13 @@ export const MostrarPasaportes: React.FC<MostrarPasaportesProps> = ({
   return (
     <DivContainer>
       <DivRow3>
-      <Route render={({ history}) => (
         <Button onClick={() => { history.push('/pasaportes') }}>
           <span role="img" aria-labelledby="trash">
             Regresar
           </span>
-        </Button>)}
-        />
+        </Button>
         {
-          !pasaporte ? 'Por favor espere...' : muestraPasaporte(pasaporte)
+          !pasaporte ? pleaseWait : muestraPasaporte(pasaporte)
         }
       </DivRow3>
     </DivContainer>

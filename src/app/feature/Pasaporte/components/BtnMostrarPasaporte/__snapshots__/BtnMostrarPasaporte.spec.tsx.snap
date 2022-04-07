@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn Mostrar Pasaportes Test should match snapshot 1`] = `
+<styled.button
+  className="showPassport"
+  onClick={[Function]}
+>
+  <span
+    aria-labelledby="trash"
+    role="img"
+  >
+    Ver
+  </span>
+</styled.button>
+`;

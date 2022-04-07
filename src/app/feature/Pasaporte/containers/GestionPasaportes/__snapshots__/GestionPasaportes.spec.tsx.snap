@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gestion Pasaporte Test should match snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <FormCrearPasaporte
+      formTitle="Crear pasaporte"
+      onSubmit={[Function]}
+    />
+  </styled.div>
+  <styled.div>
+    <ListaPasaportes
+      onClickEliminarPasaporte={[Function]}
+      pasaportes={
+        Array [
+          Object {
+            "address": "ipsun",
+            "application_date": "2021-01-01",
+            "birthdate": "2021-01-01",
+            "document_id": 12345,
+            "fullname": "lorem",
+          },
+        ]
+      }
+    />
+    <PaginadorPasaportes
+      cantidadTotalPasaportes={1}
+      onClickCambiarPagina={[Function]}
+    />
+  </styled.div>
+</styled.div>
+`;

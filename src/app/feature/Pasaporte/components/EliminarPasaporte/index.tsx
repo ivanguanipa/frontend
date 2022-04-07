@@ -20,7 +20,7 @@ export const BtnEliminarPasaporte: React.FC<BtnEliminarPasaporteProps> = ({
     
   };
   return (
-    <Button onClick={handleEliminar}>
+    <Button onClick={handleEliminar} className={'deletePassport'}>
       <span role="img" aria-labelledby="trash">
         🗑️
       </span>

@@ -1,6 +1,6 @@
 import { EstadoPasaporte } from 'app/core/redux/modelo/pasaporte/EstadoPasaporte';
 import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
-import { agregarNuevoPasaporte, eliminarPasaporte, mostrarPasaporte, listarPasaportes } from 'app/core/redux/acciones/pasaporte/PasaporteAcciones';
+import { agregarNuevoPasaporte, eliminarPasaporte, mostrarPasaporte, listarPasaportes, estadoInicial } from 'app/core/redux/acciones/pasaporte/PasaporteAcciones';
 import reductorPasaportes from './pasaporteReductor';
 
 describe('Reductor pasaportes', () => {
@@ -127,5 +127,29 @@ describe('Reductor pasaportes', () => {
     );
     // Assert
     expect(nuevoEstado).toStrictEqual(estadoInicial);
+  });  
+  it('debería retornar estado default', () => {
+    // Arrange
+    //definicion estado inicial
+    //definicion modelo
+    const pasaportes: Pasaporte[] = [];
+    
+    const estadoIni: EstadoPasaporte = {
+      cantidadTotalPasaporte: 0,
+      pasaportes:pasaportes,
+    };
+
+    const estadoEsperado: EstadoPasaporte = {
+      cantidadTotalPasaporte: 0,
+      pasaportes:pasaportes,
+    };
+
+    // Act
+    const nuevoEstado = reductorPasaportes(
+      estadoIni,
+      estadoInicial(),
+    );
+    // Assert
+    expect(nuevoEstado).toStrictEqual(estadoIni);
   });  
 });

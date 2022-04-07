@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lazy Page Test should match snapshot 1`] = `
+<styled.nav>
+  <NavBrand
+    imgSrc="logo-ceiba.png"
+    text="Ceiba Software"
+  />
+  <NavList
+    items={
+      Array [
+        Object {
+          "label": "Home",
+          "url": "/home",
+        },
+        Object {
+          "label": "Pasaportes",
+          "url": "/pasaportes",
+        },
+      ]
+    }
+  />
+</styled.nav>
+`;

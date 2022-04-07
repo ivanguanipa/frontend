@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Router Page Test should match snapshot 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Bloque React ⚛️ | 
+      Inicio
+    </title>
+    <meta
+      content="Página inicial"
+      name="description"
+    />
+  </HelmetWrapper>
+  <styled.div>
+    <h1>
+      Página de inicio
+    </h1>
+  </styled.div>
+</Fragment>
+`;

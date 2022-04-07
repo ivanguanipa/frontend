@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Page Test should match snapshot 1`] = `
+<Layout
+  description="Página inicial"
+  title="Inicio"
+>
+  <h1>
+    Página de inicio
+  </h1>
+</Layout>
+`;

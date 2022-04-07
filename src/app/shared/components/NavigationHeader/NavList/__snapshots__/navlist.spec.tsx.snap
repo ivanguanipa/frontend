@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavList Page Test should match snapshot 1`] = `
+<styled.ul>
+  <li
+    key="Home"
+  >
+    <NavItem
+      label="Home"
+      to="/home"
+    />
+  </li>
+  <li
+    key="Pasaportes"
+  >
+    <NavItem
+      label="Pasaportes"
+      to="/pasaportes"
+    />
+  </li>
+</styled.ul>
+`;

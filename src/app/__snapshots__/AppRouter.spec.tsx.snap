@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App router Test should match snapshot 1`] = `
+<BrowserRouter>
+  <NavigationHeader />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/home"
+    />
+    <Route
+      component={[Function]}
+      path="/pasaportes"
+    />
+  </Switch>
+</BrowserRouter>
+`;

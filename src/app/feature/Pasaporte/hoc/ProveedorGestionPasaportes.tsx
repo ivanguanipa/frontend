@@ -7,7 +7,7 @@ import { EstadoGeneral } from 'app/core/redux/modelo/pasaporte/EstadoGeneral';
 import { GestionPasaportes } from '../containers/GestionPasaportes';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state: EstadoGeneral) => {
+export const mapStateToProps = (state: EstadoGeneral) => {
   return state.pasaportes;
 }; 
 

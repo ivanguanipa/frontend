@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItem Page Test should match snapshot 1`] = `
+<styled.div>
+  <Styled(Link)
+    replace={true}
+    to="/"
+  >
+    <styled.img
+      src="asd"
+    />
+  </Styled(Link)>
+</styled.div>
+`;
+
+exports[`NavItem Page Test should match snapshot 2`] = `
+<styled.div>
+  <Styled(Link)
+    replace={true}
+    to="/"
+  >
+    <styled.span>
+      asd
+    </styled.span>
+  </Styled(Link)>
+</styled.div>
+`;

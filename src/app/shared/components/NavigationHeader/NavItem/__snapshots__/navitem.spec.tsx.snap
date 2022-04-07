@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItem Page Test should match snapshot 1`] = `
+<styled.div>
+  <Styled(Link)
+    replace={true}
+    to="asd"
+  >
+    aa
+  </Styled(Link)>
+</styled.div>
+`;

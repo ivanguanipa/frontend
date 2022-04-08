@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Main Page Test shallow render 1`] = `
+<Layout
+  description="Ver de pasaporte"
+  title="Pasaportes"
+>
+  <Connect(MostrarPasaportes) />
+</Layout>
+`;
+
+exports[`Show Page Test shallow render 1`] = `
+<Layout
+  description="Ver de pasaporte"
+  title="Pasaportes"
+>
+  <Connect(MostrarPasaportes) />
+</Layout>
+`;
+
 exports[`ShowPage Test should match snapshot 1`] = `
 <ContextConsumer>
   <Component />

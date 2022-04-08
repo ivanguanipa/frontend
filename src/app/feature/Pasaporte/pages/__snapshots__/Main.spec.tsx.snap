@@ -5,3 +5,12 @@ exports[`Main Test should match snapshot 1`] = `
   <Component />
 </ContextConsumer>
 `;
+
+exports[`Show Page Test shallow render 1`] = `
+<Layout
+  description="Gestión de pasaportes"
+  title="Pasaportes"
+>
+  <Connect(GestionPasaportes) />
+</Layout>
+`;

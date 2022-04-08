@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ShallowWrapper, shallow } from 'enzyme';
-import MainPage from './Main'
+import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
+import HomeMainPage from './Main'
 import { Route } from 'react-router-dom';
 
 import { createMemoryHistory, createLocation } from 'history';
@@ -16,7 +17,7 @@ const thematch: match<{ id: string }> = {
 };
 const location = createLocation(thematch.url);
 
-describe('Show Page Test', () => {
+describe('Main Page Test', () => {
     let componentWrapper: ShallowWrapper;
     afterEach(() => {
             componentWrapper.unmount();
@@ -25,7 +26,7 @@ describe('Show Page Test', () => {
      
       it('shallow render', () => {
          componentWrapper = shallow(
-            <MainPage history={history}
+            <HomeMainPage history={history}
                          location={location}
                          match={thematch} />
         );

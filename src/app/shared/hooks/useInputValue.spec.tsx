@@ -18,4 +18,11 @@ describe('Header', () => {
   it('renders', () => {
     expect(useInputValue('test')).toBeDefined()
   })
+  it('renders', () => {
+    const event = {
+      target: { value: 'the-value' }
+    } as React.ChangeEvent<HTMLInputElement>;
+    useInputValue('test').onChange(event)
+    expect(test).toBeDefined()
+  })
 })

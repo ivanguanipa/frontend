@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Page Test shallow render 1`] = `
+<Layout
+  description="Home de la aplicación"
+  title="Home"
+>
+  <div>
+    hola mundo
+  </div>
+</Layout>
+`;
+
+exports[`Main Page Test should match snapshot 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

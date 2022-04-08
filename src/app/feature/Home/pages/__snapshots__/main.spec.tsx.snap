@@ -10,9 +10,3 @@ exports[`Main Page Test shallow render 1`] = `
   </div>
 </Layout>
 `;
-
-exports[`Main Page Test should match snapshot 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;

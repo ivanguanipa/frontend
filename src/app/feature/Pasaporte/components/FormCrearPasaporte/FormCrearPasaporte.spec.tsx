@@ -106,14 +106,14 @@ describe('FormCrearPasaporte test', () => {
     const fullname = elem.querySelector('input[name="fullname"]');
     const address = elem.querySelector('input[name="address"]');
     const birthdate = elem.querySelector('input[name="birthdate"]');
-    const document_id = elem.querySelector('input[name="document_id"]');
+    const documentId = elem.querySelector('input[name="documentId"]');
     const submitButton = elem.querySelector('button[type="submit"]');
 
     await wait(() => {
       fullname && fireEvent.change(fullname, setTextEvent('fullname', 'Lorem'));
       address && fireEvent.change(address, setTextEvent('address', 'Ipsun'));
       birthdate && fireEvent.change(birthdate, setTextEvent('birthdate', '2021-01-01'));
-      document_id && fireEvent.change(document_id, setTextEvent('document_id', '12345'));
+      documentId && fireEvent.change(documentId, setTextEvent('documentId', '12345'));
     });
 
     await wait(() => {
@@ -130,8 +130,8 @@ describe('FormCrearPasaporte test', () => {
     const fullname = elem.querySelector('input[name="fullname"]');
     const address = elem.querySelector('input[name="address"]');
     const birthdate = elem.querySelector('input[name="birthdate"]');
-    const document_id = elem.querySelector('input[name="document_id"]');
-    const application_date = elem.querySelector('input[name="application_date"]');
+    const documentId = elem.querySelector('input[name="documentId"]');
+    const applicationDate = elem.querySelector('input[name="applicationDate"]');
     const submitButton = elem.querySelector('button[type="submit"]');
 
     await wait(() => {
@@ -144,10 +144,10 @@ describe('FormCrearPasaporte test', () => {
       birthdate && fireEvent.change(birthdate, setTextEvent('birthdate', '2021-01-01'));
     });
     await wait(() => {
-      document_id && fireEvent.change(document_id, setTextEvent('document_id', '12345'));
+      documentId && fireEvent.change(documentId, setTextEvent('documentId', '12345'));
     });
     await wait(() => {
-      application_date && fireEvent.change(application_date, setTextEvent('application_date', '2021-01-01'));
+      applicationDate && fireEvent.change(applicationDate, setTextEvent('applicationDate', '2021-01-01'));
     });
 
     await wait(() => {
@@ -158,8 +158,8 @@ describe('FormCrearPasaporte test', () => {
     expect(formSubmitted.fullname).toBe('Lorem');
     expect(formSubmitted.address).toBe('Ipsum');
     expect(formSubmitted.birthdate).toBe('2021-01-01');
-    expect(formSubmitted.document_id).toBe(12345);
-    expect(formSubmitted.application_date).toBe('2021-01-01');
+    expect(formSubmitted.documentId).toBe(12345);
+    expect(formSubmitted.applicationDate).toBe('2021-01-01');
 
 
   });

@@ -28,9 +28,9 @@ BtnMostrarPasaporte.propTypes = {
     fullname: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
     birthdate: PropTypes.string.isRequired,
-    document_id: PropTypes.number.isRequired,
-    application_date: PropTypes.string.isRequired,
-    appointment_date: PropTypes.string.isRequired,
+    documentId: PropTypes.number.isRequired,
+    applicationDate: PropTypes.string.isRequired,
+    appointmentDate: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
   }).isRequired,
 };

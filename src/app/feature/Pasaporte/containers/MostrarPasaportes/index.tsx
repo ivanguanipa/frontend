@@ -31,11 +31,11 @@ export const MostrarPasaportes: React.FC<MostrarPasaportesProps> = ({
   const muestraPasaporte = (data:Pasaporte)=>{
       return  <div>
       <div>Nombre y Apellido: {data.fullname}</div>
-      <div>Cédula: {data.document_id}</div>
+      <div>Cédula: {data.documentId}</div>
       <div>Dirección: {data.address}</div>
       <div>Fecha de Nacimiento: {dateFormat(data.birthdate,"DD-MM-YYYY")} </div>
-      <div>Fecha de la solicitud: {dateFormat(data.application_date,"DD-MM-YYYY")}</div>
-      <div>Fecha de la cita: {dateFormat(String(data.appointment_date),"DD-MM-YYYY")}</div>
+      <div>Fecha de la solicitud: {dateFormat(data.applicationDate,"DD-MM-YYYY")}</div>
+      <div>Fecha de la cita: {dateFormat(String(data.appointmentDate),"DD-MM-YYYY")}</div>
       <div>Monto a cancelar: {data.amount}</div>
       </div>
   }
@@ -60,8 +60,8 @@ MostrarPasaportes.propTypes = {
     fullname: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
     birthdate: PropTypes.string.isRequired,
-    document_id: PropTypes.number.isRequired,
-    application_date: PropTypes.string.isRequired,
+    documentId: PropTypes.number.isRequired,
+    applicationDate: PropTypes.string.isRequired,
   }).isRequired,
   mostrarPasaporte: PropTypes.func.isRequired,
 };

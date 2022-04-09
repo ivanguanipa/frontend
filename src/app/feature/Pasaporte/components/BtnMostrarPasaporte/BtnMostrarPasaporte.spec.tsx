@@ -25,9 +25,9 @@ describe('Btn Mostrar Pasaportes Test', () => {
         fullname: "string",
         address: "string",
         birthdate: "string",
-        document_id:1,
-        application_date: "string",
-        appointment_date: "string",
+        documentId:1,
+        applicationDate: "string",
+        appointmentDate: "string",
         amount: 1,
     };
 
@@ -47,9 +47,9 @@ describe('Btn Mostrar Pasaportes Test', () => {
         fullname: "string",
         address: "string",
         birthdate: "string",
-        document_id:1,
-        application_date: "string",
-        appointment_date: "string",
+        documentId:1,
+        applicationDate: "string",
+        appointmentDate: "string",
         amount: 1,
       };
 

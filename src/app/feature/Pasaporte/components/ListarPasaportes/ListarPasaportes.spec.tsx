@@ -11,8 +11,8 @@ describe('PaginadorPasaportes Test', () => {
     fullname: 'lorem',
     address: 'ipsun',
     birthdate: '2021-01-01',
-    document_id: 12345,
-    application_date: '2021-01-01',
+    documentId: 12345,
+    applicationDate: '2021-01-01',
   }];
   const mockEliminarPasaporte = jest.fn();
 
@@ -36,9 +36,9 @@ describe('PaginadorPasaportes Test', () => {
         fullname: "string",
         address: "string",
         birthdate: "string",
-        document_id:1,
-        application_date: "string",
-        appointment_date: "string",
+        documentId:1,
+        applicationDate: "string",
+        appointmentDate: "string",
         amount: 1,
       };
 

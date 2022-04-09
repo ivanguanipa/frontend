@@ -4,8 +4,8 @@ export interface Pasaporte {
     fullname: string,
     address: string,
     birthdate: string,
-    document_id: number,
-    application_date: string,
-    appointment_date?: Nullable<string>,
+    documentId: number,
+    applicationDate: string,
+    appointmentDate?: Nullable<string>,
     amount?: Nullable<number>,
 }

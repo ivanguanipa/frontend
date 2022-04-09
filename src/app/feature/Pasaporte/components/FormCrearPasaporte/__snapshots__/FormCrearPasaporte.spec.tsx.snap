@@ -58,7 +58,7 @@ exports[`FormCrearPasaporte test should match snapshot 1`] = `
     </div>
     <input
       class="sc-AxirZ eAukyj"
-      name="document_id"
+      name="documentId"
       placeholder="Cédula"
       type="number"
       value=""
@@ -72,14 +72,14 @@ exports[`FormCrearPasaporte test should match snapshot 1`] = `
     </div>
     <input
       class="sc-AxirZ eAukyj"
-      name="application_date"
+      name="applicationDate"
       placeholder="Fecha de la Solicitud"
       type="date"
       value=""
     />
     <input
       class="sc-AxirZ eAukyj"
-      name="appointment_date"
+      name="appointmentDate"
       type="hidden"
       value=""
     />

@@ -18,8 +18,8 @@ describe('Mostrar Pasaporte Test', () => {
     fullname: 'lorem',
     address: 'ipsun',
     birthdate: '2021-01-01',
-    document_id: 12345,
-    application_date: '2021-01-01',
+    documentId: 12345,
+    applicationDate: '2021-01-01',
   };
 
    it('should match snapshot', done => {

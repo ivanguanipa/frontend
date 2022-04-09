@@ -16,9 +16,9 @@ export const PasaporteRepositorio = {
   agregarPasaporte: (pasaporte: Pasaporte) =>{
    return  axiosIntance.post(`/pasaportes`, {
     address: pasaporte.address,
-    application_date: pasaporte.application_date,
+    applicationDate: pasaporte.applicationDate,
     birthdate: pasaporte.birthdate,
-    document_id: pasaporte.document_id,
+    documentId: pasaporte.documentId,
     fullname: pasaporte.fullname,
    });
   }

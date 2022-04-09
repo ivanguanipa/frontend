@@ -17,11 +17,11 @@ describe('Pasaporte Repositorio',()=>{
             "address": "La Vega",
             "amount": 20,
             "birthdate": "1981-05-06T00:00:00.000Z",
-            "created_at": "2022-04-01T13:36:48.000Z",
-            "deleted_at": "2022-04-01T20:46:15.000Z",
-            "document_id": 14906880,
-            "application_date": "2022-01-05T00:00:00.000Z",
-            "appointment_date": "2022-01-06T00:00:00.000Z"
+            "createdAt": "2022-04-01T13:36:48.000Z",
+            "deletedAt": "2022-04-01T20:46:15.000Z",
+            "documentId": 14906880,
+            "applicationDate": "2022-01-05T00:00:00.000Z",
+            "appointmentDate": "2022-01-06T00:00:00.000Z"
           }];
           
         spyOn(axiosIntance, 'get').and.returnValue(data);
@@ -37,11 +37,11 @@ describe('Pasaporte Repositorio',()=>{
             "address": "La Vega",
             "amount": 20,
             "birthdate": "1981-05-06T00:00:00.000Z",
-            "created_at": "2022-04-01T13:36:48.000Z",
-            "deleted_at": "2022-04-01T20:46:15.000Z",
-            "document_id": 14906880,
-            "application_date": "2022-01-05T00:00:00.000Z",
-            "appointment_date": "2022-01-06T00:00:00.000Z"
+            "createdAt": "2022-04-01T13:36:48.000Z",
+            "deletedAt": "2022-04-01T20:46:15.000Z",
+            "documentId": 14906880,
+            "applicationDate": "2022-01-05T00:00:00.000Z",
+            "appointmentDate": "2022-01-06T00:00:00.000Z"
           }];
           
         spyOn(axiosIntance, 'get').and.returnValue(data);
@@ -63,9 +63,9 @@ describe('Pasaporte Repositorio',()=>{
             fullname: "string",
             address: "string",
             birthdate: "string",
-            document_id:1,
-            application_date: "string",
-            appointment_date: "string",
+            documentId:1,
+            applicationDate: "string",
+            appointmentDate: "string",
             amount: 1,
         };
 

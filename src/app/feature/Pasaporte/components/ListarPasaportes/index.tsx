@@ -45,12 +45,12 @@ export const ListaPasaportes: React.FC<ListaPasaportesProps> = ({
       <tbody>
         {pasaportes.map((pasaporte: Pasaporte) => {
           return (
-            <tr key={pasaporte.document_id}>
+            <tr key={pasaporte.documentId}>
               <td>{pasaporte.fullname}</td>
-              <td>{pasaporte.document_id}</td>
+              <td>{pasaporte.documentId}</td>
               <td>{pasaporte.address}</td>
-              <td>{dateFormat(pasaporte.application_date,"DD-MM-YYYY")}</td>
-              <td>{dateFormat(String(pasaporte.appointment_date),"DD-MM-YYYY")}</td>
+              <td>{dateFormat(pasaporte.applicationDate,"DD-MM-YYYY")}</td>
+              <td>{dateFormat(String(pasaporte.appointmentDate),"DD-MM-YYYY")}</td>
               <td>{pasaporte.amount}</td>
               
               <td>

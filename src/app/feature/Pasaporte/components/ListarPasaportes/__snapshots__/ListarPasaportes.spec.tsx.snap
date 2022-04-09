@@ -66,9 +66,9 @@ exports[`PaginadorPasaportes Test should match snapshot 1`] = `
           pasaporte={
             Object {
               "address": "ipsun",
-              "application_date": "2021-01-01",
+              "applicationDate": "2021-01-01",
               "birthdate": "2021-01-01",
-              "document_id": 12345,
+              "documentId": 12345,
               "fullname": "lorem",
             }
           }
@@ -78,9 +78,9 @@ exports[`PaginadorPasaportes Test should match snapshot 1`] = `
           pasaporte={
             Object {
               "address": "ipsun",
-              "application_date": "2021-01-01",
+              "applicationDate": "2021-01-01",
               "birthdate": "2021-01-01",
-              "document_id": 12345,
+              "documentId": 12345,
               "fullname": "lorem",
             }
           }

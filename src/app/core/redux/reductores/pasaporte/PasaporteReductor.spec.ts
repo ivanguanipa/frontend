@@ -16,8 +16,8 @@ describe('Reductor pasaportes', () => {
       fullname: 'lorem',
       address: 'ipsun',
       birthdate: '2021-01-01',
-      document_id: 12345,
-      application_date: '2021-01-01',
+      documentId: 12345,
+      applicationDate: '2021-01-01',
     };
 
     //definicion estado inicial
@@ -43,8 +43,8 @@ describe('Reductor pasaportes', () => {
       fullname: 'lorem',
       address: 'ipsun',
       birthdate: '2021-01-01',
-      document_id: 12345,
-      application_date: '2021-01-01',
+      documentId: 12345,
+      applicationDate: '2021-01-01',
     };
     const estadoInicial: EstadoPasaporte = {
       cantidadTotalPasaporte: 2,
@@ -73,8 +73,8 @@ describe('Reductor pasaportes', () => {
       fullname: 'lorem',
       address: 'ipsun',
       birthdate: '2021-01-01',
-      document_id: 12345,
-      application_date: '2021-01-01',
+      documentId: 12345,
+      applicationDate: '2021-01-01',
     };
     const estadoInicial: EstadoPasaporte = {
       cantidadTotalPasaporte: 2,
@@ -105,8 +105,8 @@ describe('Reductor pasaportes', () => {
       fullname: 'lorem',
       address: 'ipsun',
       birthdate: '2021-01-01',
-      document_id: 12345,
-      application_date: '2021-01-01',
+      documentId: 12345,
+      applicationDate: '2021-01-01',
     }];
     const estadoInicial: EstadoPasaporte = {
       cantidadTotalPasaporte: 1,

@@ -14,9 +14,9 @@ interface FormValues {
   fullname: string;
   address: string;
   birthdate: string;
-  document_id: number;
-  application_date: string;
-  appointment_date?:  Nullable<string>;
+  documentId: number;
+  applicationDate: string;
+  appointmentDate?:  Nullable<string>;
   id?:  Nullable<number>;
   amount?:  Nullable<number>;
 }
@@ -32,9 +32,9 @@ const validationSchema = Yup.object().shape<FormValues>({
   fullname: Yup.string().required('El campo nombre y apellido es requerido.'),
   address: Yup.string().required('El campo dirección es requerido.'),
   birthdate: Yup.string().required('El campo fecha de nacimiento es requerido.'),
-  document_id: Yup.number().moreThan(0,'El campo cédula es requerido.').required('El campo cédula es requerido.'),
-  application_date: Yup.string().required('El campo fecha de solicitud es requerido.'),
-  appointment_date: Yup.string().nullable(),
+  documentId: Yup.number().moreThan(0,'El campo cédula es requerido.').required('El campo cédula es requerido.'),
+  applicationDate: Yup.string().required('El campo fecha de solicitud es requerido.'),
+  appointmentDate: Yup.string().nullable(),
   amount: Yup.number().nullable(),
   id: Yup.number().nullable(),
 });
@@ -47,9 +47,9 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
     fullname:'',
     address: '',
     birthdate: '',
-    document_id: 0,
-    application_date: '',
-    appointment_date: null,
+    documentId: 0,
+    applicationDate: '',
+    appointmentDate: null,
     amount: null,
     id: null,
   },
@@ -62,9 +62,9 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
       fullname: values.fullname,
       address: values.address,
       birthdate: values.birthdate,
-      document_id: values.document_id,
-      application_date: values.application_date,
-      appointment_date: values.appointment_date,
+      documentId: values.documentId,
+      applicationDate: values.applicationDate,
+      appointmentDate: values.appointmentDate,
       amount: values.amount,
       id: values.id,
     });
@@ -117,38 +117,38 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
       <Input
       type='number'
         disabled={disabled}
-        name="document_id"
+        name="documentId"
         placeholder="Cédula"
-        value={formik.values.document_id===0?'':formik.values.document_id}
+        value={formik.values.documentId===0?'':formik.values.documentId}
         onChange={formik.handleChange}
       />
-      {formik.touched.document_id && formik.errors.document_id && (
-        <SpanError>{formik.errors.document_id}</SpanError>
+      {formik.touched.documentId && formik.errors.documentId && (
+        <SpanError>{formik.errors.documentId}</SpanError>
       )}
       <div><label htmlFor="fullname">Fecha de la Solicitud</label></div>
 
       <Input
         type='date'
         disabled={disabled}
-        name="application_date"
+        name="applicationDate"
         placeholder="Fecha de la Solicitud"
-        value={formik.values.application_date}
+        value={formik.values.applicationDate}
         onChange={formik.handleChange}
       />
-      {formik.touched.application_date && formik.errors.application_date && (
-        <SpanError>{formik.errors.application_date}</SpanError>
+      {formik.touched.applicationDate && formik.errors.applicationDate && (
+        <SpanError>{formik.errors.applicationDate}</SpanError>
       )}
       <Input
         type='hidden'
         disabled={disabled}
-        name="appointment_date"
-        value={formik.values.application_date}
+        name="appointmentDate"
+        value={formik.values.applicationDate}
       />
       <Input
         type='hidden'
         disabled={disabled}
         name="amount"
-        value={formik.values.application_date}
+        value={formik.values.applicationDate}
 
       />
      
@@ -165,9 +165,9 @@ FormCrearPasaporte.propTypes = {
     fullname: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
     birthdate: PropTypes.string.isRequired,
-    document_id: PropTypes.number.isRequired,
-    application_date: PropTypes.string.isRequired,
-    appointment_date: PropTypes.string,
+    documentId: PropTypes.number.isRequired,
+    applicationDate: PropTypes.string.isRequired,
+    appointmentDate: PropTypes.string,
     amount: PropTypes.number,
   }),
 };

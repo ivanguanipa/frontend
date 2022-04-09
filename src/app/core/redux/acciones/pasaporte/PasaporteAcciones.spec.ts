@@ -25,9 +25,9 @@ import { axiosIntance } from 'app/core/config/AxiosConfig';
             fullname: "string",
             address: "string",
             birthdate: "string",
-            document_id:1,
-            application_date: "string",
-            appointment_date: "string",
+            documentId:1,
+            applicationDate: "string",
+            appointmentDate: "string",
             amount: 1,
         }];
         expect(listarPasaportes(data,2)).toStrictEqual({"cantidadTotalPasaporte": 2, "payload": data, "type": "LISTAR_PASAPORTES"});
@@ -39,9 +39,9 @@ import { axiosIntance } from 'app/core/config/AxiosConfig';
             fullname: "string",
             address: "string",
             birthdate: "string",
-            document_id:1,
-            application_date: "string",
-            appointment_date: "string",
+            documentId:1,
+            applicationDate: "string",
+            appointmentDate: "string",
             amount: 1,
         };
         expect(mostrarPasaporte(data)).toStrictEqual({"payload": data, "type": "MOSTRAR_PASAPORTE"});
@@ -53,9 +53,9 @@ import { axiosIntance } from 'app/core/config/AxiosConfig';
             fullname: "string",
             address: "string",
             birthdate: "string",
-            document_id:1,
-            application_date: "string",
-            appointment_date: "string",
+            documentId:1,
+            applicationDate: "string",
+            appointmentDate: "string",
             amount: 1,
         };
         expect(eliminarPasaporte(data)).toStrictEqual({"payload": data, "type": "ELIMINAR_PASAPORTE"});
@@ -69,9 +69,9 @@ import { axiosIntance } from 'app/core/config/AxiosConfig';
             fullname: "string",
             address: "string",
             birthdate: "string",
-            document_id:1,
-            application_date: "string",
-            appointment_date: "string",
+            documentId:1,
+            applicationDate: "string",
+            appointmentDate: "string",
             amount: 1,
         };
 
@@ -93,9 +93,9 @@ import { axiosIntance } from 'app/core/config/AxiosConfig';
             fullname: "string",
             address: "string",
             birthdate: "string",
-            document_id:1,
-            application_date: "string",
-            appointment_date: "string",
+            documentId:1,
+            applicationDate: "string",
+            appointmentDate: "string",
             amount: 1,
         };
         

@@ -57,7 +57,7 @@ export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
     ).then((respuesta: any) =>{
       dispacth(
         eliminarPasaporte(pasaporte)
-      )
+      );
     }
     ).catch(e=>{
       alert('El registro que intenta eliminar no existe');
@@ -72,7 +72,7 @@ export function agregarPasaportesAsync(pasaporte: Pasaporte) {
     ).then((respuesta: any) =>{
       dispacth(
         agregarNuevoPasaporte(respuesta.data)
-      )
+      );
     }
     ).catch(({error,request})=>{
       alert(`El hubo un problema al intentar agregar: ${JSON.parse(request.response).message}`);
@@ -88,7 +88,7 @@ export function listarPasaportesAsync(numeroPagina: number) {
     ).then((respuesta: any) =>{
       dispacth(
         listarPasaportes(respuesta.data, respuesta.data.length)
-      )
+      );
     }
     );
   };
@@ -100,7 +100,7 @@ export function mostrarPasaporteAsync(id: string, callback:any) {
     ).then((respuesta: any) =>{
       dispacth(
         mostrarPasaporte(respuesta.data[0])
-      )
+      );
     }
     ).catch(({error,request})=>{
       callback();

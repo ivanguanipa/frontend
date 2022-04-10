@@ -4,8 +4,7 @@ import { DivContainer, DivRow3 } from './styles';
 import { Pasaporte } from '../../models/Pasaporte';
 import { useEffect } from 'react';
 import { Button } from 'app/shared/components/Button';
-import { useParams } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import {dateFormat} from "app/utils/index";
 
 interface MostrarPasaportesProps {

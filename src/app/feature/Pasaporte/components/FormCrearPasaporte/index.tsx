@@ -58,16 +58,7 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
     values: FormValues,
     { resetForm }: FormikHelpers<FormValues>
   ) => {
-    onSubmit({
-      fullname: values.fullname,
-      address: values.address,
-      birthdate: values.birthdate,
-      documentId: values.documentId,
-      applicationDate: values.applicationDate,
-      appointmentDate: values.appointmentDate,
-      amount: values.amount,
-      id: values.id,
-    });
+    onSubmit(values);
     resetForm();
   };
   const formik = useFormik({

@@ -10,7 +10,7 @@ export const PasaporteRepositorio = {
     axiosIntance.get(`/pasaportes?${limit(NUMERO_REGISTROS, page)}`),
   mostrarPasaporte: (id: string) =>
     axiosIntance.get(`/pasaportes/show/${id}`),
-  eliminarPasaporte: (id: any) =>{
+  eliminarPasaporte: (id: number) =>{
    return  axiosIntance.delete(`/pasaportes/delete`, {data:{id}});
   },
   agregarPasaporte: (pasaporte: Pasaporte) =>{

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ShallowWrapper, shallow } from 'enzyme';
 import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
-import {AppRouter} from './AppRouter'
+import {appRouter as AppRouter} from './AppRouter'
 
 describe('App router Test', () => {
     let componentWrapper: ShallowWrapper;

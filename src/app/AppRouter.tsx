@@ -5,7 +5,7 @@ import MainPage from 'app/Main';
 import { NavigationHeader } from 'app/shared/components/NavigationHeader';
 import { PasaporteRouter } from 'app/feature/Pasaporte/PasaporteRouter';
 
-export const AppRouter = () => {
+export const appRouter = () => {
   return (
     <BrowserRouter>
       <NavigationHeader />

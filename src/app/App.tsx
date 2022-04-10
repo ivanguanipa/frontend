@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { AppRouter } from 'app/AppRouter';
+import { appRouter as AppRouter } from 'app/AppRouter';
 import { GlobalErrorBoundary } from './core/errors/GlobalErrorBoundary';
 import { Provider } from 'react-redux';
 import store from 'app/core/redux/store';
 
-function App() {
+function app() {
   return (
     <GlobalErrorBoundary>
       <Provider store={store}>
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default app;

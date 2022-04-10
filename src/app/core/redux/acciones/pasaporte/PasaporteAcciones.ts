@@ -53,7 +53,7 @@ export function eliminarPasaporte(pasaporte: Pasaporte): TiposAccionesPasaporte 
 export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
   return function (dispacth: any) {
     PasaporteRepositorio.eliminarPasaporte(
-      pasaporte.id
+      Number(pasaporte.id)
     ).then((respuesta: any) =>{
       dispacth(
         eliminarPasaporte(pasaporte)

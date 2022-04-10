@@ -8,6 +8,7 @@ import {
 } from './PasaporteTiposAcciones';
 import { Pasaporte } from 'app/feature/Pasaporte/models/Pasaporte';
 import { PasaporteRepositorio } from 'app/core/api/pasaportes.repositorio';
+import { AxiosResponse } from 'axios';
 
 export function estadoInicial(): TiposAccionesPasaporte {
   return {
@@ -51,10 +52,10 @@ export function eliminarPasaporte(pasaporte: Pasaporte): TiposAccionesPasaporte 
 }
 
 export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
-  return function (dispacth: any) {
+  return function (dispacth: Function) {
     PasaporteRepositorio.eliminarPasaporte(
       Number(pasaporte.id)
-    ).then((respuesta: any) =>{
+    ).then((respuesta: AxiosResponse) =>{
       dispacth(
         eliminarPasaporte(pasaporte)
       );
@@ -66,10 +67,10 @@ export function eliminarPasaportesAsync(pasaporte: Pasaporte) {
 }
 
 export function agregarPasaportesAsync(pasaporte: Pasaporte) {
-  return function (dispacth: any) {
+  return function (dispacth: Function) {
     PasaporteRepositorio.agregarPasaporte(
       pasaporte
-    ).then((respuesta: any) =>{
+    ).then((respuesta: AxiosResponse) =>{
       dispacth(
         agregarNuevoPasaporte(respuesta.data)
       );
@@ -82,10 +83,10 @@ export function agregarPasaportesAsync(pasaporte: Pasaporte) {
 
 
 export function listarPasaportesAsync(numeroPagina: number) {
-  return function (dispacth: any) {
+  return function (dispacth: Function) {
     PasaporteRepositorio.consultarPorPagina(
       numeroPagina
-    ).then((respuesta: any) =>{
+    ).then((respuesta: AxiosResponse) =>{
       dispacth(
         listarPasaportes(respuesta.data, respuesta.data.length)
       );
@@ -94,10 +95,11 @@ export function listarPasaportesAsync(numeroPagina: number) {
   };
 }
 export function mostrarPasaporteAsync(id: string, callback:any) {
-  return function (dispacth: any) {
+  return function (dispacth: Function) {
     PasaporteRepositorio.mostrarPasaporte(
       id
-    ).then((respuesta: any) =>{
+    ).then((respuesta: AxiosResponse) =>{
+      console.log('listar',dispacth);
       dispacth(
         mostrarPasaporte(respuesta.data[0])
       );

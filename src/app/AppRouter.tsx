@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { HomeRouter } from 'app/feature/Home/HomeRouter';
-import MainPage from 'app/Main';
+import { homeRouter as HomeRouter } from 'app/feature/Home/homeRouter';
+import MainPage from 'app/main';
 import { NavigationHeader } from 'app/shared/components/NavigationHeader';
 import { PasaporteRouter } from 'app/feature/Pasaporte/PasaporteRouter';
 

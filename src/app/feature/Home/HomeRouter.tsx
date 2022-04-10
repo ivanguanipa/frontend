@@ -4,7 +4,7 @@ import { LazyFallback } from '../../shared/components/LazyFallback';
 
 export const HomeMainPage = React.lazy(() => import('./pages/Main'));
 
-export const HomeRouter = () => (
+export const homeRouter = () => (
   <React.Suspense fallback={<LazyFallback />}>
     {/* Layout compartido entre las rutas va aquí */}
     <Switch>

@@ -4,29 +4,9 @@ import * as Yup from 'yup';
 import { Button } from 'app/shared/components/Button';
 import { FormikHelpers } from 'formik/dist/types';
 import { Input } from 'app/shared/components/Input';
-import { Pasaporte } from '../../models/Pasaporte';
 import { SpanError } from './styles';
 import { useFormik } from 'formik';
-
-type Nullable<T> = T | null ;
-
-interface FormValues {
-  fullname: string;
-  address: string;
-  birthdate: string;
-  documentId: number;
-  applicationDate: string;
-  appointmentDate?:  Nullable<string>;
-  id?:  Nullable<number>;
-  amount?:  Nullable<number>;
-}
-
-interface FormCrearPasaporteProp {
-  onSubmit: (payload: Pasaporte) => any;
-  disabled?: boolean;
-  formTitle: string;
-  initialValues?: FormValues;
-}
+import {FormValues, FormCrearPasaporteProp} from './FormCrearPasaporte.interfaces'
 
 const validationSchema = Yup.object().shape<FormValues>({
   fullname: Yup.string().required('El campo nombre y apellido es requerido.'),

@@ -94,12 +94,11 @@ export function listarPasaportesAsync(numeroPagina: number) {
     );
   };
 }
-export function mostrarPasaporteAsync(id: string, callback:any) {
+export function mostrarPasaporteAsync(id: string, callback:Function) {
   return function (dispacth: Function) {
     PasaporteRepositorio.mostrarPasaporte(
       id
     ).then((respuesta: AxiosResponse) =>{
-      console.log('listar',dispacth);
       dispacth(
         mostrarPasaporte(respuesta.data[0])
       );

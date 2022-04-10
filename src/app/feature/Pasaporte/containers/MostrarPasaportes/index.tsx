@@ -8,7 +8,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import {dateFormat} from 'app/utils/index';
 
 interface MostrarPasaportesProps {
-  mostrarPasaporte: (id: string, callback:any) => void;
+  mostrarPasaporte: (id: string, callback:Function) => void;
   pasaporte?: Pasaporte;
 }
 export const MostrarPasaportes: React.FC<MostrarPasaportesProps> = ({

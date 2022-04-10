@@ -14,7 +14,7 @@ export interface FormValues {
 }
 
 export interface FormCrearPasaporteProp {
-  onSubmit: (payload: Pasaporte) => any;
+  onSubmit: (payload: Pasaporte) => void;
   disabled?: boolean;
   formTitle: string;
   initialValues?: FormValues;

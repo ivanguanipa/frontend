@@ -8,7 +8,7 @@ import {dateFormat} from 'app/utils/index';
 
 export interface ListaPasaportesProps {
   pasaportes: Array<Pasaporte>;
-  onClickEliminarPasaporte: (pasaporte: Pasaporte) => any;
+  onClickEliminarPasaporte: (pasaporte: Pasaporte) => void;
 }
 
 export const ListaPasaportes: React.FC<ListaPasaportesProps> = ({

@@ -13,7 +13,7 @@ exports[`App Page Test should match snapshot 1`] = `
       }
     }
   >
-    <AppRouter />
+    <appRouter />
   </Provider>
 </GlobalErrorBoundary>
 `;

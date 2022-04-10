@@ -2,7 +2,7 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Button } from 'app/shared/components/Button';
 import { Pasaporte } from '../../models/Pasaporte';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 interface BtnMostrarPasaporteProps {
   pasaporte: Pasaporte;

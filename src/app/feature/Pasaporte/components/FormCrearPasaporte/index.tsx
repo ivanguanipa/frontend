@@ -7,7 +7,7 @@ import { Input } from 'app/shared/components/Input';
 import { SpanError } from './styles';
 import { useFormik } from 'formik';
 import {FormValues,
-FormCrearPasaporteProp} from './FormCrearPasaporte.interfaces'
+FormCrearPasaporteProp} from './FormCrearPasaporte.interfaces';
 
 const validationSchema = Yup.object().shape<FormValues>({
   fullname: Yup.string().required('El campo nombre y apellido es requerido.'),

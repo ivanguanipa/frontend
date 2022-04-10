@@ -15,7 +15,7 @@ export const BtnEliminarPasaporte: React.FC<BtnEliminarPasaporteProps> = ({
 
   const handleEliminar = () => {
     if(window.confirm('Esta seguro de eliminar el registro seleccionado?')){
-      onEliminar(pasaporte)
+      onEliminar(pasaporte);
     }
     
   };

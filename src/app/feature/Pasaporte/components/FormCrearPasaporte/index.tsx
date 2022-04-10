@@ -78,7 +78,7 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
         value={formik.values.fullname}
         onChange={formik.handleChange}
       />
-      {formik.touched.fullname && formik.errors.fullname && (
+      {formik.errors.fullname && (
         <SpanError>{formik.errors.fullname}</SpanError>
       )}
       <div> <label htmlFor="fullname">Dirección</label></div>
@@ -89,7 +89,7 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
         value={formik.values.address}
         onChange={formik.handleChange}
       />
-      {formik.touched.address && formik.errors.address && (
+      {formik.errors.address && (
         <SpanError>{formik.errors.address}</SpanError>
       )}
       <div><label htmlFor="fullname">Fecha de Nacimiento</label></div>
@@ -126,7 +126,7 @@ export const FormCrearPasaporte: React.FC<FormCrearPasaporteProp> = ({
         value={formik.values.applicationDate}
         onChange={formik.handleChange}
       />
-      {formik.touched.applicationDate && formik.errors.applicationDate && (
+      {formik.errors.applicationDate && (
         <SpanError>{formik.errors.applicationDate}</SpanError>
       )}
       <Input

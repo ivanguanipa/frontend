@@ -23,7 +23,7 @@ export const MostrarPasaportes: React.FC<MostrarPasaportesProps> = ({
     const recordNotFound = ()=>{
       alert('no encontrado');
       history.push('/pasaportes');
-    }
+    };
     mostrarPasaporte(id, recordNotFound);
   }, [id,mostrarPasaporte,history]);
 
@@ -37,11 +37,12 @@ export const MostrarPasaportes: React.FC<MostrarPasaportesProps> = ({
       <div>Fecha de la cita: {dateFormat(String(data.appointmentDate),'DD-MM-YYYY')}</div>
       <div>Monto a cancelar: {data.amount}</div>
       </div>
-  }
+  };
+
   return (
     <DivContainer>
       <DivRow3>
-        <Button onClick={() => { history.push('/pasaportes') }}>
+        <Button onClick={() => { history.push('/pasaportes'); }}>
           <span role='img' aria-labelledby='trash'>
             Regresar
           </span>
